@@ -9,13 +9,13 @@ go get -u github.com/voidint/unix2date
 # How to use?
 - System time zone
 ```
-unix2date 1
+$ unix2date 1
 1970/1/1 08:00:01
 ```
 
 - UTC time zone
 ```
-unix2date --utc 1
+$ unix2date --utc 1
 1970/1/1 00:00:01
 ```
 
