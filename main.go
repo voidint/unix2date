@@ -27,7 +27,7 @@ func main() {
 		},
 	}
 
-	app.Flags = []cli.Flag{·
+	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:  "layout, l",
 			Value: defaultLayout,
