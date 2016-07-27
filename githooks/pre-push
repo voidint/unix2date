@@ -1,0 +1,26 @@
+#!/bin/sh
+
+curDir=`pwd`
+exitcode=0
+dstFileName="build.go"
+# 当前git的最新commit号
+commitID=`git log --pretty=format:"%H" -1`
+# build.go文件全路径
+buildPath="${curDir}/$dstFileName"
+
+
+echo "Latest commit ==> $commitID"
+# 替换build.go文件内容(为了修改build常量的值)
+echo "package main\n\nconst build = \"$commitID\"" > $buildPath
+echo "Replace file content ==> $buildPath"
+
+
+git add "$buildPath"
+echo "Exec command ==> git add $buildPath"
+
+
+git commit -m "update build sequence"
+echo "Exec command ==> git commit -m \"update build sequence\""
+
+
+exit 0
