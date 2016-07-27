@@ -18,7 +18,7 @@ const (
 func main() {
 	app := cli.NewApp()
 	app.Name = "unix2date"
-	app.Version = "v0.0.1"
+	app.Version = fmt.Sprintf("%s\nbuild: %s", "v0.0.1", build)
 	app.Usage = "Convert UNIX timestamp to date string."
 	app.UsageText = "unix2date [global options] [arguments...]"
 	app.Authors = []cli.Author{
@@ -27,7 +27,7 @@ func main() {
 		},
 	}
 
-	app.Flags = []cli.Flag{
+	app.Flags = []cli.Flag{·
 		cli.StringFlag{
 			Name:  "layout, l",
 			Value: defaultLayout,
