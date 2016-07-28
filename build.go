@@ -1,3 +1,3 @@
 package main
 
-const build = "f6306e22a6c245c42728d420570aa47d6f421b4a"
+const build = "6ebb93970dd2483e230363a05345901099bb8499"
