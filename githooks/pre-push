@@ -19,8 +19,10 @@ git add "$buildPath"
 echo "Exec command ==> git add $buildPath"
 
 
-git commit --no-post-rewrite --no-verify -m "update build sequence" 
+git commit -m "update build sequence" 
 echo "Exec command ==> git commit -m \"update build sequence\""
 
+git push --no-verify origin master:master
 
-exit 0
+
+exit -1
