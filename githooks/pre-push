@@ -22,6 +22,9 @@ echo "Exec command ==> git add $buildPath"
 git commit -m "update build sequence" 
 echo "Exec command ==> git commit -m \"update build sequence\""
 
-git push --no-verify origin master:master
+remote="$1"
+`git push --no-verify $remote master:master`
+echo "Exec command ==> git push --no-verify $remote master:master"
+
 
 exit 1
