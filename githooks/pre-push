@@ -24,5 +24,4 @@ echo "Exec command ==> git commit -m \"update build sequence\""
 
 git push --no-verify origin master:master
 
-
-exit 0
+exit 1
