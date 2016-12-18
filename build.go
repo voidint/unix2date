@@ -1,3 +1,8 @@
 package main
 
-const build = "d8339f14b4423f81562edecbf1932dec3af5ac11"
+var (
+	// Date build time
+	Date string
+	// Commit latest git commit id
+	Commit string
+)
